@@ -52,7 +52,7 @@ function requireString(value: unknown, field: string, file: string): string {
 }
 
 function agentFromMarkdown(dirName: string): MarketplaceAgent {
-  const file = path.join(agentsDir, dirName, "AGENT.md");
+  const file = path.join(agentsDir, dirName, "AGENT_DEFINITION.md");
   const { data, content } = matter(fs.readFileSync(file, "utf-8"));
   const frontmatter = data as Record<string, unknown>;
 
